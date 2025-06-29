@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deteksi Plat Nomor by Abdu</title>
+    <style>
+        body { font-family: sans-serif; background-color: #f4f4f9; margin: 0; padding: 20px; display: flex; flex-direction: column; align-items: center; }
+        .container { background-color: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); max-width: 800px; width: 100%; margin-bottom: 20px; }
+        h1, h2 { color: #333; text-align: center; }
+        form { display: flex; flex-direction: column; align-items: center; gap: 15px; margin-bottom: 30px; }
+        input[type="file"] { border: 1px solid #ddd; padding: 10px; border-radius: 4px; }
+        input[type="submit"] { background-color: #007bff; color: white; padding: 10px 20px; border: none; border-radius: 4px; cursor: pointer; font-size: 16px; }
+        input[type="submit"]:hover { background-color: #0056b3; }
+        .result { text-align: center; margin-top: 20px; }
+        img { max-width: 100%; height: auto; border: 1px solid #ddd; border-radius: 4px; margin-top: 10px; }
+        p.status { font-weight: bold; font-size: 1.2em; }
+        .result-data { list-style: none; padding: 0; margin-top: 15px; }
+        .result-data li { background: #e9ecef; margin: 5px 0; padding: 10px; border-radius: 4px; }
+        hr { border: 1px solid #eee; width: 100%; margin: 30px 0; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Deteksi Plat Nomor - Upload Gambar</h1>
+        <p style="text-align: center;">Upload gambar kendaraan untuk mendeteksi plat nomornya.</p>
+        
+        <form action="/upload_image" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" accept="image/png, image/jpeg, image/jpg" required>
+            <input type="submit" value="Deteksi Plat Nomor">
+        </form>
+        
+        {% if result_image %}
+        <div class="result">
+            <h2>Hasil Deteksi</h2>
+            <p class="status">{{ status }}</p>
+            <img src="{{ url_for('static', filename='uploads/' + result_image) }}" alt="Hasil Deteksi">
+            
+            {% if results_data %}
+            <h3>Data yang Terbaca:</h3>
+            <ul class="result-data">
+                {% for item in results_data %}
+                <li>Plat: <strong>{{ item.text }}</strong> | Wilayah: {{ item.region }}</li>
+                {% endfor %}
+            </ul>
+            {% endif %}
+        </div>
+        {% endif %}
+    </div>
+
+    <hr>
+
+    <div class="container">
+        <h2>Deteksi Real-Time via Webcam</h2>
+        <div class="result">
+            <p>Arahkan kamera ke plat nomor. Deteksi akan berjalan otomatis.</p>
+            <img src="{{ url_for('video_feed') }}" alt="Video Feed">
+        </div>
+    </div>
+
+</body>
+</html>
