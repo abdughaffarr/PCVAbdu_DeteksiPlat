@@ -2,15 +2,17 @@
 - **Deteksi Objek**: Menggunakan model deteksi objek untuk menemukan lokasi plat nomor dalam sebuah gambar.
 - **Pengenalan Karakter**: Menerapkan OCR untuk mengekstrak dan membaca teks dari plat nomor yang sudah terdeteksi.
 - **Pemrosesan Gambar**: Melakukan berbagai teknik prapemrosesan gambar untuk meningkatkan akurasi deteksi dan OCR.
-- **Antarmuka Sederhana**: (Jika ada) Dilengkapi dengan antarmuka pengguna yang mudah digunakan untuk mengunggah gambar dan melihat hasilnya.
+- **Antarmuka Sederhana** :
+<img width="591" alt="image" src="https://github.com/user-attachments/assets/dfaf72c1-b7f7-4f3a-8b60-4ab9fa398f92" />
+
 
 ## Teknologi yang Digunakan
 - **Bahasa**: Python
 - **Library Utama**:
     - OpenCV (untuk pemrosesan gambar)
     - PyTorch / TensorFlow (untuk model deteksi/OCR)
-    - Flask / Django (jika proyek ini adalah aplikasi web)
-    - NumPy
+    - Flask 
+    - YOLO
 
 ---
 
@@ -29,15 +31,15 @@ git clone [https://github.com/](https://github.com/)## Fitur Utama
 - **Deteksi Objek**: Menggunakan model deteksi objek untuk menemukan lokasi plat nomor dalam sebuah gambar.
 - **Pengenalan Karakter**: Menerapkan OCR untuk mengekstrak dan membaca teks dari plat nomor yang sudah terdeteksi.
 - **Pemrosesan Gambar**: Melakukan berbagai teknik prapemrosesan gambar untuk meningkatkan akurasi deteksi dan OCR.
-- **Antarmuka Sederhana**: (Jika ada) Dilengkapi dengan antarmuka pengguna yang mudah digunakan untuk mengunggah gambar dan melihat hasilnya.
+- **Antarmuka Sederhana**: 
 
 ## Teknologi yang Digunakan
 - **Bahasa**: Python
 - **Library Utama**:
     - OpenCV (untuk pemrosesan gambar)
     - PyTorch / TensorFlow (untuk model deteksi/OCR)
-    - Flask / Django (jika proyek ini adalah aplikasi web)
-    - NumPy
+    - Flask 
+    - YOLO
 
 ---
 
