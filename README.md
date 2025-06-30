@@ -54,6 +54,6 @@ Ikuti langkah-langkah di bawah ini untuk menjalankan proyek di komputer lokal An
 ### 2. Clone Repository
 Buka terminal atau command prompt Anda dan jalankan perintah berikut:
 ```bash
-git clone [https://github.com/](https://github.com/)[abdughaffar]/proyek-deteksi-plat.git
+git clone [https://github.com/abdughaffarr/PCVAbdu_DeteksiPlat.git](https://github.com/abdughaffarr/PCVAbdu_DeteksiPlat.git)
 
-cd proyek-deteksi-plat
+cd PCVAbdu_DeteksiPlat
